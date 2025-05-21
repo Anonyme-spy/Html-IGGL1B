@@ -3,6 +3,9 @@ node_modules/
 
 # Environment variables
 assets/
+.env
+.history
+
 
 # Logs
 logs/
