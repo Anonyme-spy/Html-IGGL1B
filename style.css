@@ -166,3 +166,34 @@ footer .footer-bottom {
 #navbarNav {
     display: none;
 }
+.row .ram div {
+    height: 220px;
+    margin: 0;
+}
+
+.row {
+    align-items: center;
+}
+
+/*animation*/
+
+@keyframes slide3D {
+        0% {
+            opacity: 0;
+            transform: perspective(1000px) rotate(30deg) translateY(50px) scale(0.9);
+        }
+    100% {
+        opacity: 1;
+        transform: perspective(1000px) rotate(0) translateY(0) scale(1);
+    }
+}
+
+.row div {
+    opacity: 0;
+    animation: slide3D 0.8s ease-out forwards;
+    transform-style: preserve-3d;
+}
+
+.row div:nth-of-type(1) {animation-delay: 0s;}
+.row div:nth-of-type(2) {animation-delay: 0.6s;}
+.row div:nth-of-type(3) {animation-delay: 1.2s;}

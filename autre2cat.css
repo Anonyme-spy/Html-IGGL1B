@@ -92,3 +92,29 @@ footer a {
 footer a:hover {
   color: #007bff;
 }
+/* animation*/
+.row {
+  perspective: 1000px;
+}
+
+.row .card {
+  opacity: 0;
+  transform: scale(0.8);
+  animation: cardAppear 0.5s ease-out forwards;
+  animation-delay: calc(var(--card-index, 0) * 0.6s);
+}
+
+.row .card:nth-child(1) { --card-index: 0; }
+.row .card:nth-child(2) { --card-index: 1; }
+.row .card:nth-child(3) { --card-index: 2; }
+
+@keyframes cardAppear {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
